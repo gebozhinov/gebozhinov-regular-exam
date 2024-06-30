@@ -25,5 +25,11 @@ jobs:
       run: echo gebozhinov
     - name: Run unit tests
       run: npm run test:unit
+    - name: Install browsers
+      run: npx playwright install
+    - name: Start the application
+      run: npm start &
+    - name: Run ui tests
+      run: npm run test:ui
 
   
